@@ -1,0 +1,66 @@
+ 
+
+
+ID
+LearnerTotal ** leave till end 
+LearnerWeightedAvg ** leave till end 
+	- 'which assignments with more points possible should be counted for more'
+		>> (Learner with 50/100 on one assignment / 190/200 on another would have a
+a weighted avg score of 240/300=80%. ) 
+
+		- Assignments: Key w/ it's ID, value associated w/ it should be the 
+% that the learner scored ont eh assignment (submission.socre/points_possible)
+		-if an assignment is not yet due, it should not be included in either the 
+average or the keyed dictionary of scores. 
+
+
+
+
+
+
+What Data do I have? 
+
+?? getLearnerData ( gives me the avg of assignments 1 &2 for each learner) 
+LearnerSubmissions( gives me : learner_id, assignment_id:, submission date, score)
+AssignmentGroup( gives me : assingment id, assignment name, due date, points_possible)
+
+( what to do first? >> 
+
+>> I need to: 
+- I have to loop through the data for each learner id to get the intended results. 
+
+
+-- What do I need to know from each assignment? 
+> Create arrays of the Learner ID's 
+
+
+>> which assignments with more points possible should be counted for me ( idk what this is) (1)
+>> key with it's ID (2)
+>> Value associated with it should be the percentage of what the learner scored on the assignment
+(submission.score/points_possible) (2)
+>> if the assignment is not yet due, it should not be included in either the average or the keyed 
+dictionary of scores. (3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

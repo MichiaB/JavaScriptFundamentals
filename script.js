@@ -157,7 +157,7 @@ const learners = [
   
 // Learner 125: weighted avg
 
- for (let i=0; i<getLearnerData.length; i++) {
+ for (let i=0; i<getLearnerid.length; i++) {
 
  if (getLearnerData[i].learner_id=== 125) {
 
@@ -207,14 +207,14 @@ const learners = [
 
 LearnerWeightedAvg = 0
 
-for (let i=0,i < LearnerSubmissions.length; i++ ) {
+for (let i=0,  i <= LearnerSubmissions.length, i++) {
 
     // add score
     LearnerTotalScore += LearnerSubmissions[i].submission.score;
 
-    // add points
+  //   add points
     LearnerTotalPoints += 100;
-}
+};
 
   
 let avg = LearnerTotalScore / LearnerTotalPoints; 

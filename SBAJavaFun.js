@@ -76,6 +76,12 @@ const LearnerSubmissions = [
   }
 ];
 
+function points_possible (id , assignments) {
+console.log(id)
+console.log(assignments)
+
+}
+
 function getLearnerData(course, ag, submissions) {
   // here, we would process this data to achieve the desired result.
   const result = [
@@ -92,6 +98,18 @@ function getLearnerData(course, ag, submissions) {
       2: 0.833 // late: (140 - 15) / 150
     }
   ];
+  let ids = []
+  console.log(submissions[0].learner_id)
+for(let i = 0 ; i < submissions.length; i++){
+  if(!ids.includes(submissions[i].learner_id)){
+
+    ids.push(submissions[i].learner_id)
+  }
+  points_possible(submissions[i].assignment_id, ag.assignments)
+  console.log(submissions[i].submission.score)
+}
+console.log(ids);
+
 
   return result;
 }
@@ -99,9 +117,15 @@ function getLearnerData(course, ag, submissions) {
 const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
 
 console.log(result);
+function add(x,y){
+  console.log(x)
+  console.log(y);
+  console.log( x+y)
+}
+// add(3,5)
+// let num = 6
 
-
-
+// add(num, 4)
 
 
 
@@ -133,99 +157,18 @@ console.log(result);
 
 
 
-const learners = [
+//{
+    // the ID of the learner for which this data has been collected
+ //   "id": number,
 
-    {
-    id:125,
-    id:132,
-    }
-];
+//  const result = []; 
 
-// Learner 125: total
-
- for (let i=0; i<LearnerSubmissions.length; i++){
-
-  if (LearnerSubmissions[i].learner_id=== 125) {
-
-    console.log(LearnerSubmissions[i]);
-  }
+// const learners = [ id: 125, id: 132];
   
-}
-  
-    // Learner 125: Assignment w/ more points
-
- for (let i=0; i<AssignmentGroup.assignments.length; i++){
-
-  if (AssignmentGroup.assignments[i].learner_id=== 125) {
-
-    console.log(AssignmentGroup.assignments[i]);
-  }
-  
-}
-  
-// Learner 125: weighted avg
-
- for (let i=0; i<getLearnerid.length; i++) {
-
- if (getLearnerData[i].learner_id=== 125) {
-
-    console.log(getLearnerData[i]);
-  }
-}
+    
 
 
-
-
-
-
-// Learner 132: total
-
- for (let i=0; i<LearnerSubmissions.length; i++){
-
-  if (LearnerSubmissions[i].learner_id === 132) {
-
-    console.log(LearnerSubmissions[i]);
-  }
-  
-}
-  
-    // Learner 132: Assignment w/ more points
-
- for (let i=0; i<AssignmentGroup.assignments.length; i++){
-
-  if (AssignmentGroup.assignments[i].learner_id === 132) {
-
-    console.log(AssignmentGroup.assignments[i]);
-  }
-  
-}
-  
-// Learner 132: weighted avg
-
- for (let i=0; i<getLearnerData.length; i++) {
-
- if (getLearnerData[i].learner_id=== 132) {
-
-    console.log(getLearnerData[i]);
- }
-}
-
-
- LearnerTotalScore = 0
-
-LearnerWeightedAvg = 0
-
-for (let i=0,  i <= LearnerSubmissions.length, i++) {
-
-    // add score
-    LearnerTotalScore += LearnerSubmissions[i].submission.score;
-
-  //   add points
-    LearnerTotalPoints += 100;
-};
-
-  
-let avg = LearnerTotalScore / LearnerTotalPoints; 
-
+// // console.log(result);
+// console.log(learners);
 
 

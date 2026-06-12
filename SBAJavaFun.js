@@ -108,8 +108,24 @@ for(let i = 0 ; i < submissions.length; i++){
   points_possible(submissions[i].assignment_id, ag.assignments)
   console.log(submissions[i].submission.score)
 }
+
 console.log(ids);
 
+
+function percentage (submission, ag){
+ (submission.score/points_possible * 100).toFixed(2)
+  if ("assignment not due "){
+    result = "not include in average"
+    result = " not include in keyed dictionary of scores "
+  } else {
+    result = " to be included in all"
+  }
+  return result;
+} 
+    
+
+
+ console.log(percentage);
 
   return result;
 }
@@ -130,7 +146,7 @@ function add(x,y){
 
 
 
-//{
+//{g(percentage)
     // the ID of the learner for which this data has been collected
  //   "id": number,
 

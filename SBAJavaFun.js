@@ -116,12 +116,15 @@ function percentage (submission, ag){
  (submission.score/points_possible * 100).toFixed(2)
   if ("assignment not due "){
     result = "not include in average"
-    result = " not include in keyed dictionary of scores "
+    break;
+if ("assignment not due"){
+  result = "not include in keyed dictonary of scores"
+}
   } else {
     result = " to be included in all"
-  }
+  } 
   return result;
-} 
+} ;
     
 
 

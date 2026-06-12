@@ -1,7 +1,0 @@
-Missing break/continue -3%
-Missing created / manipulated arrays -10%
-Missing retrieval of Information from Objects -5%
-Missing Helper functions -10%
-Program returns no data -20%
-Program runs with errors -10%
-Infrequent Commits -5%
